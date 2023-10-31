@@ -1,0 +1,59 @@
+{
+  "productList": [
+    {
+      "productName": "Samsung",
+      "productCategory": "electronics",
+      "productModel": "Brand New",
+      "date": "2023-09-06T18:30:00.000Z",
+      "price": 125000,
+      "description": "This is a samsung Mobile Phone Product",
+      "id": 2
+    },
+    {
+      "productName": "Apple",
+      "productCategory": "fruits",
+      "productModel": "Brand New",
+      "price": 1500,
+      "description": "This a fresh apple fruit to eat",
+      "date": "2023-09-06T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "Orange",
+      "productCategory": "fruits",
+      "productModel": "Brand New",
+      "price": 1200,
+      "description": "This a Fresh Orange Fruit",
+      "date": "2023-09-06T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "Apple 13 pro",
+      "productCategory": "electronics",
+      "productModel": "Brand New",
+      "date": "2023-09-06T18:30:00.000Z",
+      "price": 350000,
+      "description": "This is a brand new I phone 13 pro",
+      "id": 5
+    },
+    {
+      "productName": "I PHONE  PRO",
+      "productCategory": "electronics",
+      "productModel": "Brand New",
+      "date": "2023-10-30T18:30:00.000Z",
+      "price": 300000,
+      "description": "This is a brand new I phone 15 pro max",
+      "id": 6
+    }
+  ],
+  "descriptions": [
+    {
+      "id": 1,
+      "body": "some description",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

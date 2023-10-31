@@ -1,0 +1,53 @@
+<h1 mat-dialog-title> {{title}} </h1>
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div mat-dialog-content class="content">
+        <mat-form-field appearance="outline">
+            <mat-label>Product Name</mat-label>
+            <input formControlName="productName" name="productName" matInput placeholder="Product Name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Product Category</mat-label>
+            <mat-select formControlName="productCategory" name="productCategory" placeholder="Product Category">
+                <mat-option value="fruits"> Fruits </mat-option>
+                <mat-option value="vegetables"> Vegetables</mat-option>
+                <mat-option value="electronics"> Electronics </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input formControlName="date" name="date" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <div class="product-model">
+            <label for="Product Model">
+                <h1>Product Model</h1>
+            </label>
+            <mat-radio-group formControlName="productModel" name="productModel"
+                aria-labelledby="example-radio-group-label" class="example-radio-group">
+                <mat-radio-button class="example-radio-button" *ngFor="let list of categoryQualityList" [value]="list">
+                    {{list}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input formControlName="price" name="price" matInput type="number" placeholder="Price">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>description</mat-label>
+            <textarea formControlName="description" name="description" matInput></textarea>
+        </mat-form-field>
+
+    </div>
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button mat-raised-button color="primary" [disabled]="productForm.invalid">{{actionBtn}}</button>
+    </div>
+</form>
